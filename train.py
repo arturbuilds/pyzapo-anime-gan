@@ -68,7 +68,7 @@ for epoch in range(500):
         generator.step(lr)
 
     if epoch % 1 == 0:
-        print(f'Эпоха: {epoch:4d} | Loss D: {loss_real + loss_fake:.4f} | Loss G: {loss_G:.4f}')
+        print(f'Епоха: {epoch:4d} | Loss D: {loss_real + loss_fake:.4f} | Loss G: {loss_G:.4f}')
 
         test_noise = np.random.normal(0, 1, (1, 100))
         gen_vector = generator.forward(test_noise)
